@@ -58,6 +58,6 @@ graph LR;
 untracked -- "git add" --> staged;
 staged -- "git commit" --> tracked;
 staget -- "изменения" --> modified;
-modified -- "git add" --> staget;
 tracked -- "изменения" --> modified;
+modified -- "git add" --> staget;
 ```
