@@ -44,3 +44,21 @@
 * Внутри HEAD — ссылка на служебный файл: refs/heads/master. Если заглянуть в этот файл, можно увидеть хеш последнего коммита.
 
 * Когда вы делаете коммит, Git обновляет refs/heads/master — записывает в него хеш последнего коммита. Получается, что HEAD тоже обновляется, так как ссылается на refs/heads/master.
+
+# Mermaid-схема
+
+
+HEAD -- это голова.
+Коммит -- это всему голова.
+Статусы файлов:
+<тут пустая строка!>
+
+```mermaid
+graph LR;
+untracked -- "git add" --> staged + tracked;
+staged + tracked -- "git commit" --> tracked;
+tracked -- "изменения" --> modified;
+modified -- "git add" --> staget + tracked;
+staget + tracked -- "изменения" --> modified;
+```
+<и тут пустая строка!>
